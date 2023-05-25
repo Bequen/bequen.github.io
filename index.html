@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martin Slachta</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet"> 
+
+    <style>
+
+        /* headers */
+        h1, h2, h3 {
+            font-family: 'Playfair Display';
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 8em;
+            margin: 0;
+        }
+
+        h2, h3 {
+            font-size: 2.4em;
+        }
+
+        p, a {
+            font-family: 'Sans serif';
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .info {
+            display: flex;
+            flex-direction: row;
+        }
+
+        
+
+        /* Dimmed */
+        .projects-header>h3,
+        .projects p {
+            color: rgb(166, 166, 166);
+        }
+
+        .about {
+            width: 15vw;
+        }
+
+        .info {
+            flex-grow: 1;
+        }
+
+        .main, .main>.header, .about, .projects {
+            padding: 50px;
+        }
+
+        .about p {
+            color: rgb(106, 106, 106);
+            
+        }
+
+        
+
+        /* project header */
+        .projects-header {
+            margin-bottom: 30px;
+        }
+
+        .projects-header>* {
+            display: inline;
+        }
+
+        .projects-header>h3 {
+            margin-left: 1.2em;
+            
+        }
+
+        .project {
+            width: 320px;
+        }
+
+        .project h3 {
+            font-size: 2.0em;
+            display: inline;
+        }
+
+        .tag {
+            font-family: 'Sans serif';
+            color: white;
+            background-color: #24A3FF;
+            padding: 4px 6px;
+            padding-bottom: 2px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            display: inline;
+            position:absolute;
+
+            margin-top: 12px;
+            margin-left: 10px;
+        }
+
+        .project-img {
+            width: 100%;
+            margin-bottom: 15px;
+
+            border-radius: 12px;
+        }
+
+        .project-img img {
+            height: 180px;
+            width: 100%;
+            border-radius: 12<px;
+            object-fit: fill;
+        }
+
+        .project>.more {
+            text-align: center;
+            color: #0042EB;
+        }
+
+        
+        .project-list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .project {
+            margin-right: 4em;
+            margin-bottom: 7em;
+        }
+
+        .project a,
+        .project a:visited {
+            color: rgb(85, 85, 244);
+            text-decoration: none;
+            border-bottom: 2px rgb(85, 85, 244) solid;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="header">
+            <h1>Martin Slachta</h1>
+            <h3>Student of Palacky University</h3>
+        </div>
+        <div class="info">
+            <div class="about">
+                <h2>about</h2>
+                <p>Currently studying on Palacky University.<p>
+                <p>I am interested in web technologies, mostly backend.</p>
+                <p>I also like to work with OpenGL or Vulkan to create some 3D interactive visual experiences.</p>
+                <p>Sometimes I do 3D graphics in Blender or simply draw.</p>
+                <p>I overall love to experiment with different technologies and paradigms to further improve myself.</p>
+            </div>
+
+            
+            <div class="projects">
+                <div class="projects-header">
+                    <h2>projects</h2>
+                    <h3>personal picks</h3>
+                </div>
+                
+                <div class="project-list">
+                    <div class="project">
+                        <div class="project-img">
+                            <img src="photo1.png" alt="">
+                        </div>
+                        <div class="name">
+                            <h3>GridEditor</h3>
+                            <div class="tag">C++</div>
+                        </div>
+                        <p>My first experiments with bigger program in C++ with OpenGL. Pretty outdated and not well written, but it taught me many things about actually building some app.</p>
+                        <a href="https://github.com/Bequen/GridEditor" class="more">more</a>
+                    </div>
+
+                    <div class="project">
+                        <div class="project-img">
+                            <img src="photo2.png" alt="">
+                        </div>
+                        <div class="name">
+                            <h3>Portal</h3>
+                            <div class="tag">C#</div>
+                        </div>
+                        <p>
+                            Project I did in C# course to gain credits early. Written with ASP.NET for both backend and frontend, but I am currently rewritting the frontend to React. It gave me insight into REST api, security and structuring apps.
+                        </p>
+                        <a href="https://github.com/Bequen/laughing-enigma" class="more">more</a>
+                    </div>
+
+                    <div class="project">
+                        <div class="project-img">
+                            <img src="photo1.png" alt="">
+                        </div>
+                        <div class="name">
+                            <h3>Jobs</h3>
+                            <div class="tag">C</div>
+                            <div class="tag">asm</div>
+                        </div>
+                        <p>
+                            Implementation of job system (similar to await/async) in pure C and assembler. Allows me to speed up my programs in future, like Loft etc. Gives me a understanding of stack, function calls and of course synchronization.
+                        </p>
+                    </div>
+
+                    <div class="project">
+                        <div class="project-img">
+                            <img src="photo1.png" alt="">
+                        </div>
+                        <div class="name">
+                            <h3>Miller</h3>
+                            <div class="tag">Rust</div>
+                        </div>
+                        <p>
+                            Me and a few friends needed something to manage our Arma servers we were hosting on AWS, so I made this very simple bot in Rust. Taught myself Rust, which I love to this day, and played a lot in AWS.
+                        </p>
+                        <a href="https://github.com/Bequen/Miller" class="more">more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
